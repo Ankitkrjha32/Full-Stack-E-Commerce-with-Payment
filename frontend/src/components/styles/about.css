@@ -1,0 +1,60 @@
+.aboutContainer > .heroAbout {
+    height: 400px;
+    width: 700px;
+    border: 2px solid #374059;
+    padding: 10px 20px;
+    border-radius: 10px;
+    position: relative;
+}
+.aboutContainer > .heroAbout::after {
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: #8F5FBC;
+    box-shadow: 0px 0px 15px #645285;
+    bottom: 95%;
+    left: 97%;
+}
+.aboutContainer > .heroAbout::before {
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: #62C2D1;
+    box-shadow: 0px 0px 15px #50808F;
+    top: 95%;
+    right: 97%;
+}
+.aboutContainer > .heroAbout > .textArea {
+    font-size: 1.2em;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .heroAbout {
+        padding: 15px;
+    }
+
+    .textArea {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .heroAbout {
+        padding: 10px;
+    }
+
+    .textArea {
+        font-size: 0.8em;
+    }
+}
+@media (max-width: 374px) {
+    .heroAbout {
+        padding: 7px;
+    }
+
+    .textArea {
+        font-size: 0.5em;
+    }
+}

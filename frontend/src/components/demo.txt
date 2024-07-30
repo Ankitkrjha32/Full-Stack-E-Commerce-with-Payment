@@ -1,0 +1,69 @@
+import React from 'react';
+import { useCart } from 'react-use-cart';
+import Layout from './layout';
+import './styles/cart.css'; // Import the CSS file
+
+const Cart = () => {
+    const {
+        isEmpty,
+        totalUniqueItems,
+        items,
+        totalItems,
+        cartTotal,
+        updateItemQuantity,
+        removeItem,
+        emptyCart,
+    } = useCart();
+
+    if (isEmpty) {
+        return (
+            <Layout>
+                <div className='container'>
+                    <h1>Your Cart is Empty</h1>
+                    <p>Please add some items to your cart.</p>
+                </div>
+            </Layout>
+        );
+    }
+
+    return (
+        <Layout>
+            <div className='container my-10'>
+                <div className='hero'>
+                    <div className='titles'>
+                        <h4>Products</h4>
+                        <h4>Price</h4>
+                        <h4>Quantity</h4>
+                        <h4>Remove</h4>
+                    </div>
+                    <div className='row'>
+                        {items.map((item) => (
+                            <div className='cart-item' key={item.id}>
+                                <div className='img'>
+                                    <img src={item.image} alt={item.title} />
+                                </div>
+                                <div className='price'>
+                                    <p>{item.price}</p>
+                                </div>
+                                <div className='quantity'>
+                                    <button onClick={() => updateItemQuantity(item.id, item.quantity + 1)}>+</button>
+                                    <span>{item.quantity}</span> {/* Added span to show quantity */}
+                                    <button onClick={() => updateItemQuantity(item.id, item.quantity - 1)}>-</button>
+                                </div>
+                                <div className='remove'>
+                                    <button onClick={() => removeItem(item.id)}>Remove Item</button>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div className='cart-footer'>
+                    <button onClick={emptyCart}>Empty Cart</button>
+                    <h3>Total: ${cartTotal.toFixed(2)}</h3>
+                </div>
+            </div>
+        </Layout>
+    );
+};
+
+export default Cart;

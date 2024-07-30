@@ -1,0 +1,36 @@
+
+.container {
+    width: 100%;
+    overflow-x: hidden;
+}
+.container > .items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.container > .items > .productCards {
+    margin: 10px 20px;
+    border: 2px solid #F5F5F5;
+    background-color: #F5F5F5;
+    padding: 10px 12px;
+    transition: 0.5s;
+}
+.container > .items > .productCards:hover {
+    border: 2px solid #F5F5F5;
+    background-color: #d7cbcb;
+
+}
+.container > .items > .productCards > .pimg > img {
+    height: 220px;
+    width: 260px;
+}
+.container > .items > .productCards > .pprice > button {
+    font-family: "poppins";
+    text-decoration: none;
+    background-color: brown;
+    padding: 5px 9px;
+    text-align: center;
+    color: aliceblue;
+    border-radius: 15px;
+}

@@ -1,0 +1,275 @@
+.container1 {
+    position: relative;
+    width: 100%;
+}
+
+.container1 > .hero1 {
+    height: 500px;
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.container1 > .hero1 > .imagebox1 {
+    position: relative;
+    z-index: 0;
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.container1 > .hero1 > .imagebox1 > img {
+    height: 300px;
+    width: 300px;
+    position: relative;
+    z-index: -1;
+}
+
+.container1 > .hero1 > .imagebox1::after {
+    content: "";
+    position: absolute;
+    background: rgba(13, 26, 48, 0.525);
+    height: 380px;
+    width: 380px;
+    border-radius: 50%;
+    left: 25%;
+    top: -15%;
+    z-index: -9999;
+    backdrop-filter: blur(5px);
+    box-shadow: 5px 5px 50px black, -5px -5px 30px #4f6d9d;
+}
+
+.container1 > .hero1 > .textbox1 {
+    margin-top: -100px;
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+.container1 > .hero1 > .textbox1 > h1 {
+    font-size: 5em;
+    font-family: "Poppins";
+    margin-left: 150px;
+}
+
+.container1>.hero1>.textbox1> h3 {
+    margin-left: -185px;
+    font-size: 2em;
+    position: relative;
+}
+.container1>.hero1>.textbox1 > span {
+    font-family: "poppins";
+    font-size: 5em;
+    position: absolute;
+    left: 360px;
+    top: 210px;
+}
+
+.container1 > .hero1 > .textbox1 > .allpro > p {
+    position: absolute;
+    font-family: "Poppins";
+    top: 65%;
+    left: 13%;
+    font-size: 1.2em;
+}
+
+.container1 > .hero1 > .textbox1 > .btns {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    margin: -40px 20px;
+}
+
+.container1 > .hero1 > .textbox1 > .btns > .men,
+.container1 > .hero1 > .textbox1 > .btns > .women {
+    position: relative;
+    display: inline-block;
+    margin: 10px 20px;
+    text-decoration: none;
+    background-color: #2e5aa1;
+    padding: 10px 10px;
+    color: aliceblue;
+    backdrop-filter: blur(10px);
+    font-size: 1.3em;
+    font-family: "Poppins";
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    width: 140px;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.container1 > .hero1 > .textbox1 > .btns > .women {
+    width: 180px;
+    text-align: center;
+}
+
+.container1 > .hero1 > .textbox1 > .btns > .men::before,
+.container1 > .hero1 > .textbox1 > .btns > .women::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(19, 46, 103, 0.306);
+    transition: width 0.5s ease, height 0.5s ease, top 0.5s ease, left 0.5s ease;
+    border-radius: 50%;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+}
+
+.container1 > .hero1 > .textbox1 > .btns > .men:hover::before,
+.container1 > .hero1 > .textbox1 > .btns > .women:hover::before {
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+}
+
+.container1 > .hero1 > .textbox1 > .btns > .men:hover,
+.container1 > .hero1 > .textbox1 > .btns > .women:hover {
+    background-color: #4f6d9d;
+    box-shadow: 0 0 20px rgba(46, 90, 161, 0.7);
+    transform: scale(1);
+}
+
+.container1 > .hero1 > .textbox1 > .btns > .men:hover .micon,
+.container1 > .hero1 > .textbox1 > .btns > .women:hover .ficon {
+    color: #1b58b2;
+}
+
+.container1 > .hero1 > .textbox1 > .btns > .men .micon,
+.container1 > .hero1 > .textbox1 > .btns > .women .ficon {
+    position: absolute;
+    background-color: #061225;
+    padding: 9px 7px;
+    top: 2%;
+    right: 1%;
+    border-radius: 0px 20px 20px 0px;
+    transition: color 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+    .container1 > .hero1 {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .container1 > .hero1 > .imagebox1 > img {
+        height: 70%;
+        width: 70%;
+    }
+
+    .container1 > .hero1 > .imagebox1::after {
+        height: 280px;
+        width: 280px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -10%;
+    }
+
+    .container1 > .hero1 > .textbox1 {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .container1 > .hero1 > .textbox1 > h1 {
+        font-size: 3.9em;
+        margin-left: 0;
+    }
+
+    .container1 > .hero1 > .textbox1 > h3 {
+        font-size: 2.5em;
+        margin-left: 0;
+    }
+
+    .container1 > .hero1 > .textbox1 > span {
+        font-size: 3em;
+        position: static;
+        margin: 10px 0;
+    }
+
+    .container1 > .hero1 > .textbox1 > .allpro > p {
+        font-size: 1.8em;
+        position: static;
+        top: auto;
+        left: auto;
+        margin: 20px 0;
+    }
+
+    .container1 > .hero1 > .textbox1 > .btns {
+        position: static;
+        bottom: auto;
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .container1 > .hero1 > .textbox1 > .btns > .men,
+    .container1 > .hero1 > .textbox1 > .btns > .women {
+        width: 260%;
+        font-size: 2em;
+        width: auto;
+        padding: 10px 20px;
+    }
+    .container1 > .hero1 > .textbox1 > .btns > .men > .micon,
+    .container1 > .hero1 > .textbox1 > .btns > .women > .ficon {
+        display: none;
+    }
+}
+
+@media (max-width: 376px) {
+    .container1 > .hero1 > .textbox1 > h1 {
+        font-size: 3em;
+        margin-left: 0;
+    }
+
+    .container1 > .hero1 > .textbox1 > h3 {
+        font-size: 2em;
+        margin-left: 0;
+    }
+
+    .container1 > .hero1 > .textbox1 > span {
+        font-size: 2.5em;
+        position: static;
+        margin: 10px 0;
+    }
+
+    .container1 > .hero1 > .textbox1 > .allpro > p {
+        font-size: 1.5em;
+        position: static;
+        width: 300px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: auto;
+        left: auto;
+        margin: 20px 0;
+    }
+
+    .container1 > .hero1 > .textbox1 > .btns {
+        position: static;
+        bottom: auto;
+        margin: 25px 0;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .container1 > .hero1 > .textbox1 > .btns > .men,
+    .container1 > .hero1 > .textbox1 > .btns > .women {
+        /* width: 260%; */
+        font-size: 1em;
+        width: auto;
+        padding: 10px 30px;
+        font-weight: bold;
+    }
+    .container1 > .hero1 > .textbox1 > .btns > .men > .micon,
+    .container1 > .hero1 > .textbox1 > .btns > .women > .ficon {
+        display: none;
+    }
+}

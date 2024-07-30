@@ -1,0 +1,47 @@
+.container>.items>.productCards>.pprice {
+    margin: 20px 15px;
+}
+
+.container>.items>.productCards>.pprice>.addtocart {
+    padding: 0px 10px;
+    background-color: #061225;
+    border: none;
+    color: aliceblue;
+    text-decoration: none;
+    font-family: "poppins";
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: -10px;
+    position: relative;
+    width: 45%;
+    text-align: left;
+    overflow: hidden;
+}
+
+.container>.items>.productCards {
+    background-color: #30374267;
+    text-align: center;
+    color: aliceblue;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.container>.items>.productCards:hover {
+    background-color: rgba(35, 73, 100, 0.475);
+    /* color: black; */
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container>.items>.productCards>.pprice>.addtocart>.cartIcon {
+    background-color: #2e5aa1;
+    /* padding: 3px 10px; */
+    padding: 15px 12px;
+    border-radius: 0px 20px 20px 0px;
+    /* border-radius: 65%; */
+    /* right: 1%; */
+    top: 1%;
+    /* top: 2%; */
+    position: absolute;
+}
+

@@ -1,0 +1,65 @@
+.contactContainer {
+    margin: 20px auto;
+    max-width: 90%;
+    padding: 20px;
+}
+
+.contactContainer > .formContactControl {
+    border: 2px solid black;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contactContainer > .formContactControl > .imgContactContainer > .fs {
+    font-size: 10em;
+}
+
+.contactContainer > .formContactControl > .formContactContainer > .contact-form > label {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.contactContainer > .formContactControl > .formContactContainer > .contact-form > label > input, 
+.contactContainer > .formContactControl > .formContactContainer > .contact-form > label > textarea {
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contactContainer > .formContactControl > .formContactContainer > .contact-form > button {
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background: linear-gradient(90deg, rgba(124,132,222,1) 32%, rgba(82,161,225,1) 73%, rgba(42,189,227,1) 100%);
+    cursor: pointer;
+    width: 50%;
+    max-width: 200px;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .contactContainer > .formContactControl {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 40px 20px;
+    }
+
+    .contactContainer > .formContactControl > .imgContactContainer > .fs {
+        font-size: 15em;
+    }
+
+    .contactContainer > .formContactControl > .formContactContainer {
+        flex: 1;
+        padding: 0 20px;
+    }
+
+    .contactContainer > .formContactControl > .formContactContainer > .contact-form {
+        width: 100%;
+    }
+}
